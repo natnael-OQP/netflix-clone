@@ -22,31 +22,8 @@ const HomePage = () => {
     return (
         <HomePageWrapper >
             <Header IsScroll={IsScroll} />
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            <h1>header</h1>
-            {
-                // <Banner />
-            }
+            <Banner />
+            
             {
                 // <Row/>
             }

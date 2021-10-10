@@ -7,7 +7,7 @@ export const HederWrapper = styled.div`
     display: flex;
     align-items: center;
     padding:30px;
-    background-color:${({IsScroll}) => IsScroll ? '#000' : '#fff'} ;
+    background-color:${({IsScroll}) => IsScroll ? '#000' : 'transparent'} ;
     transition: all .5s ease-in;
 
 `;

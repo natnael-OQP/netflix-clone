@@ -1,25 +1,29 @@
 import React from 'react'
 import styled from 'styled-components';
-const Btn = styled.button`
-    position: fixed;
-    right:25px;
+
+
+const ButtonR = styled.button`
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #e50914;
-    padding: 7px 17px;
+    background-color: ${({bgColor}) => bgColor ? bgColor : "#000"};
+    padding: ${({padding})=> padding?padding : "3px 3px"};
     font-weight: 400;
-    font-size: 1rem;
-    color: #fff;
-    border-radius: 3px;
+    font-size: ${({size})=> size?size : "1rme"};
+    color: ${({color})=> color?color : "white"};
+    border-radius: .85vw;
+    letter-spacing:.03rem;
 `;
-const Button = ({title}) => {
-    return (
-        <Btn>
-            {title}
-        </Btn>
-    )
-}
+export const BtnRight = styled(ButtonR)`
+    position: fixed;
+    right:25px;
+`;
+export const BannerButton = styled(ButtonR)`
+    width:130px;
+    height:40px;
+    border-radius: 20px;
+`;
 
-export default Button;
+
+export default ButtonR;
