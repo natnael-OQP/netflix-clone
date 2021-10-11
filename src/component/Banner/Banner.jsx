@@ -12,29 +12,33 @@ const Banner = () => {
     const [movie, setMovie] = useState([]);
 
     useEffect(() => {
-        async function fetchData(){
-            const request = await axios.get(requests.fetchNetflixOriginal);
+        async function fetchData () {
+            const request = await axios.get(requests.fetchAction);
             setMovie(
-                
+                request.data.results[
+                    Math.floor(Math.random() * request.data.results.length-1 )
+                ]
             )
+            return request;
         }
-    },[])
-
-    function truncate(string, n){
+        fetchData();
+    }, [])
+    
+    console.log(movie);
+    
+    function truncate(string, n) {
         return string?.length > n ? string.substr(0, n - 1) + '...':string;
     }
     return (
         <BannerContainer style={{
-            backgroundPosition:"center center",
-            backgroundImage: `url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_flag.svg/1200px-Black_flag.svg.png")`,
-            backgroundPosition: "cover",
-            borderImageRepeat: "no-repeat",
+            backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path}")`,
+            
         }} >
             <BannerWrapper>
-                <BannerTitle>Movies title</BannerTitle>
+                <BannerTitle>{movie?.title ||movie?.name || movie?.original_name }</BannerTitle>
                 <BannerDescription>
                     {
-                        truncate(` The base Movies description about the title and i wana to be shown watch the base Movies description about the title and i wana to be shown watch the base Movies description about the title and i wana to be shown watch`,152)
+                        truncate(`${movie.overview}`,140)
                     }
                 </BannerDescription>
                 <ButtonContainer>

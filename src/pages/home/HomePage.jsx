@@ -23,11 +23,8 @@ const HomePage = () => {
         <HomePageWrapper >
             <Header IsScroll={IsScroll} />
             <Banner />
-            
-            {
-                // <Row/>
-            }
-            </HomePageWrapper>
+            <Row/>
+        </HomePageWrapper>
     )
 }
 
