@@ -9,7 +9,7 @@ export const HederWrapper = styled.div`
     padding:30px;
     background-color:${({IsScroll}) => IsScroll ? '#000' : 'transparent'} ;
     transition: all .5s ease-in;
-
+    z-index:99999;
 `;
 
 export const Image = styled.img`

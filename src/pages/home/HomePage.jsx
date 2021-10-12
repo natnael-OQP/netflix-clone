@@ -3,6 +3,7 @@ import { HomePageWrapper } from '.'
 import Banner from '../../component/Banner/Banner'
 import Header from '../../component/Header/Header'
 import Row from '../../component/Row/Row'
+import requests from '../../fetchTMDB/Request'
 
 const HomePage = () => {
     const [IsScroll, setScroll] = useState(false);
@@ -23,7 +24,13 @@ const HomePage = () => {
         <HomePageWrapper >
             <Header IsScroll={IsScroll} />
             <Banner />
-            <Row/>
+            <Row title="Trending Now "  fetchUrl={requests.fetchTrending} IsLargeRow />
+            <Row title="Top Rated "  fetchUrl={requests.fetchTopRated} />
+            <Row title="Action Movies "  fetchUrl={requests.fetchAction} />
+            <Row title="Comedy Movies "  fetchUrl={requests.fetchComedy} />
+            <Row title="Horror Movies "  fetchUrl={requests.fetchHorror} />
+            <Row title="Romance Movies "  fetchUrl={requests.fetchRomance} />
+            <Row title="Documentaries "  fetchUrl={requests.fetchDocumentaries} />
         </HomePageWrapper>
     )
 }
