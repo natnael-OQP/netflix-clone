@@ -41,8 +41,6 @@ export const Title = styled.h1`
     color:#fff;
     font-size: 3rem;
     line-height: 4rem;
-    font-weight: bolder;
-    font-family: 'Poppins', sans-serif;
 
 `;
 
