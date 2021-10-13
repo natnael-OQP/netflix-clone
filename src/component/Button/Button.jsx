@@ -11,7 +11,7 @@ const ButtonR = styled.button`
     background-color: ${({bgColor}) => bgColor ? bgColor : "#000"};
     padding: ${({padding})=> padding?padding : "3px 3px"};
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 400;
     font-size: ${({size})=> size?size : "1rme"};
     color: ${({color})=> color?color : "white"};
     /* border-radius: .85vw; */
