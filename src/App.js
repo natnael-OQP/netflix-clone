@@ -7,22 +7,24 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import LoginPage from './pages/LoginPage/LoginPage';
 
 function App() {
+  const user = null;
   return (
     <Router>
       <GlobalStyle/>
-      <HomePage />
-      <Switch>
-          <Route path="/">
-            <HomePage />
-          </Route>
-          <Route path="/profile">
-            {
-              // <Users />
-            }
-        </Route>
-        </Switch>
+      {
+          !user ? (
+          <LoginPage/>
+        ): (
+          <Switch>
+            <Route exact path="/">
+                <HomePage />
+              </Route>
+            </Switch>
+          )
+      }
     </Router>
   );
 }
