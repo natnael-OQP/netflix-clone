@@ -28,27 +28,34 @@ const SignIn = () => {
 
     const onSubmit = (data) => {
         auth.createUserWithEmailAndPassword(
-            data.name,
+            data.email,
             data.password,
-        ).then((user) => {
-            console.log(user);
-        }).catch((error) => alert(error));
+        ).then((authUser) => {
+            console.log(authUser);
+        }).catch((error) => {
+            alert(error.message)
+        });
     }
     
+    const SignIn = () => {
+
+    }
+
 
     return (
         <SignInContainer>
             <Form onSubmit={handleSubmit(onSubmit)} >
                 <Title>Sign In</Title>
-                <Input {...register("name", { required: true })} type="text" placeholder="full name" />
+                <Input {...register("email", { required: true })} type="email" placeholder="Email address" />
                 {/* errors will return when field validation fails  */}
-                {errors.name && <Error>Email is required</Error>}
-                <Input {...register("password", { required: true })} type="email" placeholder="Email address" required />
+                {errors.email && <Error>Email is required</Error>}
+                <Input {...register("password", { required: true })} type="password" placeholder="Password"  />
                 {/* errors will return when field validation fails  */}
                 {errors.password && <Error>Password is required</Error>}
-                <ButtonR type="submit" size=".89rem" padding="7px 17px" bgColor="#e50914" width="100%" css={` margin-top:.5rem; border-radius:5px; height:35px;`}
+                <ButtonR  size=".89rem" padding="7px 17px" bgColor="#e50914" width="100%"
+                    css={` margin-top:.5rem; border-radius:5px; height:35px;`}
                 >Sign In  </ButtonR>
-                <SignUpContainer>New to Etflix? <SignUpNow> Sign Up Now <ArrowForwardIos fontSize="small" /></SignUpNow> </SignUpContainer>
+                <SignUpContainer>New to Etflix? <SignUpNow type="submit" > Sign Up Now <ArrowForwardIos fontSize="small" /></SignUpNow> </SignUpContainer>
             </Form>
             <ButtonR  size=".89rem" padding="7px 17px" bgColor="#4285F4" width="100%" css={` height:35px; border-radius:5px; :hover{ background-color:#4285F4 !important; } `}
                 onClick={GoogleSignIn}

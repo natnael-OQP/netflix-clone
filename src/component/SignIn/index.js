@@ -56,7 +56,7 @@ export const SignUpContainer = styled.h4`
     font-family: 'Poppins', sans-serif;
     color:gray;
     `;
-export const SignUpNow = styled.span`
+export const SignUpNow = styled.button`
     display:flex;
     align-items:center;
     padding-left:.3rem;

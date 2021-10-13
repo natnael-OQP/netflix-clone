@@ -27,6 +27,7 @@ export const BtnRight = styled(ButtonR)`
 export const AvatarRight = styled.div`
     position: fixed;
     right:25px;
+    cursor:pointer;
 `;
 
 export const BannerButton = styled(ButtonR)`
