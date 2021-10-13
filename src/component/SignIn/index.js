@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-export const SignInContainer = styled.form`
+export const SignInContainer = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,6 +23,12 @@ export const SignInContainer = styled.form`
     }
 `;
 
+export const Form = styled.form`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`;
+
 export const Title = styled.h2`
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
@@ -42,7 +48,8 @@ export const Input = styled.input`
 `;
 
 export const SignUpContainer = styled.h4`
-    margin-top:1rem;
+    margin-top:.5rem;
+    margin-bottom:1.3rem;
     display:flex;
     align-items:center;
     font-weight: 400;
@@ -60,4 +67,12 @@ export const SignUpNow = styled.span`
         cursor: pointer;
         text-decoration: underline;
     }
+`;
+
+export const Error = styled.h4`
+    color: #FF9494;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .03rem ;
+    font-family: 'Poppins', sans-serif;
 `;

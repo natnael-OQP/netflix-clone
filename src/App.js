@@ -5,12 +5,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
+import { useSelector } from 'react-redux';
 import LoginPage from './pages/LoginPage/LoginPage';
+import { SelectUser } from './features/userSlice';
 
 function App() {
-  const user = null;
+  const user = useSelector(SelectUser);
   return (
     <Router>
       <GlobalStyle/>

@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'styled-components';
 
 
@@ -24,6 +23,12 @@ export const BtnRight = styled(ButtonR)`
     position: fixed;
     right:25px;
 `;
+
+export const AvatarRight = styled.div`
+    position: fixed;
+    right:25px;
+`;
+
 export const BannerButton = styled(ButtonR)`
     width:130px;
     height:40px;
