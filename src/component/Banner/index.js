@@ -9,6 +9,7 @@ export const BannerContainer = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
+    
 `;
 
 export const BannerWrapper = styled.div`
@@ -19,9 +20,15 @@ export const BannerWrapper = styled.div`
     margin-left: 100px;
     display:flex;
     flex-direction: column;
-    width:35rem;
+    max-width:35rem;
     /* opacity:1; */
     z-index: 99;
+    @media(max-width:790px){
+        left:10px;
+        margin-left:0;
+        top:200px;
+        padding:10px
+    }
 `;
 
 export const BannerTitle = styled.h1`
@@ -30,8 +37,9 @@ export const BannerTitle = styled.h1`
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
-
-    /* margin:1rem 0; */
+    @media(max-width:790px){
+        font-size: 2.2rem;
+    }
 `;
 
 export const BannerDescription = styled.p`
@@ -42,6 +50,9 @@ export const BannerDescription = styled.p`
     letter-spacing: .03rem;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
+    @media(max-width:790px){
+        font-size:.83rem;
+    }
 `;
 
 export const ButtonContainer = styled.div`
@@ -49,6 +60,10 @@ export const ButtonContainer = styled.div`
     width:60%;
     display: flex;
     justify-content:space-between;
+    @media(max-width:600px){
+        flex-direction: column;
+        height:90px;
+    }
 `;
 
 export const BannerFadeBottom = styled.div`

@@ -14,6 +14,10 @@ export const Image = styled.img`
     margin-right: 10px;
     cursor: pointer;
     border-radius:5px;
+    @media(max-width:790px){
+        width:207px;
+        height:270px;
+    }
 `;
 
 export const InfoContainer = styled.div`

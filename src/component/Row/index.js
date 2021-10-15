@@ -4,6 +4,10 @@ export const RowContainer = styled.div`
     display: flex;
     flex-direction: column;
     padding:20px 30px;
+    @media(max-width:790px){
+        padding:10px 8px;
+        
+    }
 `;
 
 export const Title = styled.h3`

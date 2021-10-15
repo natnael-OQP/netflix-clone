@@ -43,6 +43,7 @@ const Row = ({ title, fetchUrl }) => {
                 
             }
             </ComponentName>
+
         </RowContainer>
     )
 }

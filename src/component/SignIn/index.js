@@ -21,6 +21,7 @@ export const SignInContainer = styled.div`
         font-size:1rem !important;
         font-weight: bold !important;
     }
+    
 `;
 
 export const Form = styled.form`
