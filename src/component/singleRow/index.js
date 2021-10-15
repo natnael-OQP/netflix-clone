@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const SingleRowContainer = styled.div`
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 `;
 
 export const Image = styled.img`
