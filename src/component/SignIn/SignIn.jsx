@@ -47,10 +47,8 @@ const SignIn = () => {
             <Form onSubmit={handleSubmit(onSubmit)} >
                 <Title>Sign In</Title>
                 <Input {...register("email", { required: true })} type="email" placeholder="Email address" />
-                {/* errors will return when field validation fails  */}
                 {errors.email && <Error>Email is required</Error>}
                 <Input {...register("password", { required: true })} type="password" placeholder="Password"  />
-                {/* errors will return when field validation fails  */}
                 {errors.password && <Error>Password is required</Error>}
                 <ButtonR  size=".89rem" padding="7px 17px" bgColor="#e50914" width="100%"
                     css={` margin-top:.5rem; border-radius:5px; height:35px;`}
